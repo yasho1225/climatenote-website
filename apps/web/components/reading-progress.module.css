@@ -1,0 +1,16 @@
+.track {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 2px;
+  z-index: 110;
+  background: transparent;
+  pointer-events: none;
+}
+
+.bar {
+  height: 100%;
+  width: 100%;
+  transform: scaleX(var(--progress, 0));
+  transform-origin: left;
+  background: var(--accent);
+}

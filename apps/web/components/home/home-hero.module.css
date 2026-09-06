@@ -1,0 +1,374 @@
+/* One immersive canvas. The week's cover is the ground the type stands on,
+   not a card beside it — so the hero reads as a single object. The band is
+   dark in both themes on purpose: contrast comes from the scrim, which we
+   control, rather than from the reader's colour scheme. */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: min(86svh, 800px);
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+  overflow: hidden;
+  color: var(--pine-ink);
+  background: var(--pine);
+}
+
+/* ---------------------------------------------------------------- backdrop */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.backdropImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.14);
+  will-change: transform;
+}
+
+.backdropFallback {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 72% 22%, color-mix(in oklab, var(--accent) 46%, transparent), transparent 52%),
+    linear-gradient(155deg, var(--pine-2), var(--pine));
+}
+
+/* Guarantees legible type over any cover the pipeline supplies. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(8, 15, 11, 0.95) 10%, rgba(8, 15, 11, 0.8) 50%, rgba(8, 15, 11, 0.62) 100%),
+    linear-gradient(to right, rgba(8, 15, 11, 0.7) 0%, rgba(8, 15, 11, 0.46) 100%);
+}
+
+.inner {
+  width: min(var(--w-wide), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: end;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+/* -------------------------------------------------------------------- lead */
+.lead {
+  animation: rise var(--dur-4) var(--ease-out) both;
+}
+
+.eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin: 0 0 var(--space-5);
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pine-ink-3);
+}
+
+.eyebrow span:first-child {
+  color: var(--accent-bright);
+}
+
+/* Sized for this column, not the full page width: --display-1 is tuned for a
+   full-bleed measure and overflows the canvas when set in a half-width lead. */
+.title {
+  margin: 0;
+  max-width: 15ch;
+  font-size: clamp(2.5rem, 1.1rem + 4.1vw, 4.35rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  font-weight: 540;
+  text-wrap: balance;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-5);
+  margin-top: var(--space-6);
+}
+
+/* The band is always dark, so the button is stated locally rather than
+   inheriting the themed .primary-button. */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  min-height: 48px;
+  padding: 0 var(--space-5);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: var(--text-sm);
+  color: #0c1310;
+  background: var(--pine-ink);
+  transition: background var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
+}
+
+.cta:hover {
+  background: #fff;
+}
+
+.cta:active {
+  transform: translateY(1px);
+}
+
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--mono);
+  font-size: var(--text-sm);
+  color: var(--pine-ink);
+  border-bottom: 1px solid color-mix(in oklab, var(--pine-ink) 42%, transparent);
+  transition: border-color var(--dur-2) var(--ease-out);
+}
+
+.secondary:hover {
+  border-color: var(--pine-ink);
+}
+
+/* ------------------------------------------------- the loop, made operable */
+.loop {
+  animation: rise var(--dur-4) var(--ease-out) both;
+  animation-delay: 160ms;
+}
+
+.steps {
+  display: flex;
+  gap: var(--space-5);
+  border-top: 1px solid color-mix(in oklab, var(--pine-ink) 22%, transparent);
+  padding-top: var(--space-4);
+}
+
+.step {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35em;
+  min-height: 44px;
+  padding: 0 0 var(--space-3);
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--pine-ink) 58%, transparent);
+  transition: color var(--dur-2) var(--ease-out);
+}
+
+.step:hover,
+.step[data-active] {
+  color: var(--pine-ink);
+}
+
+.stepNum {
+  color: var(--accent-bright);
+}
+
+.stepLabel {
+  font-size: var(--text-sm);
+  letter-spacing: 0.12em;
+}
+
+/* Progress doubles as the state indicator, so the active step is never
+   signalled by colour alone. */
+.stepBar {
+  width: 100%;
+  height: 2px;
+  margin-top: 0.5em;
+  background: color-mix(in oklab, var(--pine-ink) 20%, transparent);
+  overflow: hidden;
+}
+
+.stepFill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-bright);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.step[data-active] .stepFill {
+  transform: scaleX(1);
+  transition: transform var(--dur-2) var(--ease-out);
+}
+
+.stepFill[data-running] {
+  animation: fill 7000ms linear both;
+}
+
+/* Reserves just enough height for the tallest stage so switching tabs doesn't
+   shift the note attribution below it — measured, not guessed. */
+.panel {
+  margin-top: var(--space-5);
+  min-height: 6em;
+  animation: fade var(--dur-3) var(--ease-out) both;
+}
+
+.panelText {
+  margin: 0;
+  max-width: 46ch;
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  color: var(--pine-ink);
+}
+
+.panelMeta {
+  margin: var(--space-3) 0 0;
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+}
+
+/* Attribution: makes clear the loop text is drawn from a real note. */
+.source {
+  display: block;
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid color-mix(in oklab, var(--pine-ink) 18%, transparent);
+}
+
+.sourceLabel {
+  display: block;
+  font-family: var(--mono);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pine-ink-3);
+}
+
+.sourceTitle {
+  display: block;
+  margin-top: 0.3em;
+  font-family: var(--display);
+  font-size: var(--text-xl);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  transition: color var(--dur-2) var(--ease-out);
+}
+
+.source:hover .sourceTitle {
+  color: var(--accent-bright);
+}
+
+.sourceMeta {
+  display: block;
+  margin-top: 0.4em;
+  font-family: var(--mono);
+  font-size: var(--text-xs);
+  color: var(--pine-ink-3);
+}
+
+/* ------------------------------------------------------------- responsive */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  /* Recomposed, not scaled: the two columns become a single reading order,
+     so the statement is never squeezed to a sliver beside the loop. */
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .title {
+    max-width: 18ch;
+  }
+
+  .panel {
+    min-height: 6.5em;
+  }
+}
+
+@media (max-width: 560px) {
+  .steps {
+    gap: var(--space-3);
+  }
+
+  .step {
+    letter-spacing: 0.1em;
+  }
+
+  .stepLabel {
+    font-size: var(--text-xs);
+  }
+
+  .panel {
+    min-height: 7.5em;
+  }
+
+  .panelText {
+    font-size: var(--text-base);
+  }
+
+  .cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lead,
+  .loop,
+  .panel {
+    animation: none;
+  }
+
+  .stepFill,
+  .stepFill[data-running] {
+    animation: none;
+    transition: none;
+  }
+
+  .step[data-active] .stepFill {
+    transform: scaleX(1);
+  }
+}

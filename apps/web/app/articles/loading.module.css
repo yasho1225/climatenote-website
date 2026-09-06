@@ -1,0 +1,79 @@
+.wrap {
+  width: min(var(--w-wide), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+  padding-top: clamp(2.5rem, 5vw, 5rem);
+}
+
+.eyebrow {
+  height: 0.85rem;
+  width: 8rem;
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  height: 3rem;
+  width: min(22rem, 70%);
+  margin-bottom: var(--space-6);
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-7);
+}
+
+.pill {
+  height: 44px;
+  width: 5.5rem;
+  border-radius: 999px;
+}
+
+.rows {
+  border-top: 1px solid var(--line-strong);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) clamp(140px, 16vw, 220px);
+  gap: clamp(1rem, 3vw, var(--space-7));
+  padding: clamp(1.5rem, 3vw, var(--space-6)) var(--space-2);
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+
+.num {
+  height: 0.9rem;
+  width: 1.6rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.titleRow {
+  height: 1.9rem;
+  width: 70%;
+}
+
+.excerpt {
+  height: 0.9rem;
+  width: 95%;
+}
+
+.thumb {
+  aspect-ratio: 16 / 11;
+  border-radius: var(--radius-m);
+}
+
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+  }
+
+  .thumb {
+    display: none;
+  }
+}

@@ -1,0 +1,54 @@
+.mark {
+  position: relative;
+  display: inline;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.underline {
+  position: absolute;
+  left: -2%;
+  bottom: -0.18em;
+  width: 104%;
+  height: 0.42em;
+  overflow: visible;
+  pointer-events: none;
+  color: var(--accent);
+}
+
+.underline path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: var(--len, 320);
+  stroke-dashoffset: var(--len, 320);
+}
+
+.draw path {
+  animation: draw var(--dur-4, 700ms) var(--ease-out, ease) forwards;
+  animation-delay: var(--mark-delay, 240ms);
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .underline path {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+
+/* When the phrase should read as highlighted rather than underlined. */
+.highlight {
+  background: linear-gradient(var(--mark), var(--mark));
+  background-size: 100% 0.9em;
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  color: inherit;
+  padding-inline: 0.04em;
+}

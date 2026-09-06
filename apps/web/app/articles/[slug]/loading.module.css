@@ -1,0 +1,68 @@
+.hero {
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--line);
+}
+
+.back {
+  height: 0.9rem;
+  width: 7rem;
+  margin-bottom: var(--space-5);
+}
+
+.chip {
+  height: 1.6rem;
+  width: 5rem;
+  border-radius: 999px;
+}
+
+.titleLine {
+  height: 2.6rem;
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+.titleLine:nth-child(2) {
+  width: 90%;
+}
+
+.titleLine:nth-child(3) {
+  width: 60%;
+  margin-bottom: var(--space-5);
+}
+
+.dek {
+  height: 1.1rem;
+  margin-bottom: var(--space-2);
+}
+
+.dek:last-of-type {
+  width: 70%;
+}
+
+.meta {
+  height: 0.85rem;
+  width: 14rem;
+  margin-top: var(--space-5);
+}
+
+.cover {
+  margin-top: var(--space-7);
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-l);
+}
+
+.body {
+  padding-top: var(--space-7);
+}
+
+.line {
+  height: 1rem;
+  margin-bottom: var(--space-3);
+}
+
+.line:nth-child(4n) {
+  width: 82%;
+}
+
+.line:nth-child(3n) {
+  width: 94%;
+}

@@ -1,0 +1,11 @@
+packages:
+  - "apps/*"
+
+overrides:
+  "uuid@<11.1.1": "11.1.1"
+
+allowBuilds:
+  "@firebase/util": true
+  "@google/genai": true
+  protobufjs: true
+  unrs-resolver: true

@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E8F11622271804ACE4DE703 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2056FA5A8472FFA7377E74B7 /* NotificationService.swift */; };
+		1036F269BA2573DA08ED0355 /* ReflectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33612DFB4BD5E8F233F4A71C /* ReflectionStore.swift */; };
+		163A6AF11F82C9302C5D3D19 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6801A063030360580180A137 /* Article.swift */; };
+		1FED32E66FBCB8CF6EB87A16 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6141A311AB0A2DF1529DFE8C /* ArticleDetailView.swift */; };
+		3A2B5EC7633043DFF3A982EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD93BAE0DE7992879800ACE /* Foundation.framework */; };
+		3D55C5A56681667E18F8704D /* ArticleBlockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5407A4BAFB7894AD623F490 /* ArticleBlockTests.swift */; };
+		4332122CE2CC9A691806F78F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 42EC63C14852397CE679124D /* PrivacyInfo.xcprivacy */; };
+		55115F699C72AF4AF4A70FB0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A14BBDD0BD3773E254B30014 /* FirebaseFirestore */; };
+		5763E2F948A64BD361E0B810 /* ImpactFactorCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F642BB4C757844306D2486 /* ImpactFactorCatalog.swift */; };
+		615472A903A673E6CCA26634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640E596B1EC401DA240EB10 /* AppDelegate.swift */; };
+		89FD6AFBC8329AD23B687BD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD93BAE0DE7992879800ACE /* Foundation.framework */; };
+		9583F37CF8DDEDFCA239F5C0 /* ActionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9224D39F515AB1F01C516AF /* ActionLog.swift */; };
+		97EE4248017A826452A680A8 /* ClimateActionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45CBB323B979FDDBEFA1E7 /* ClimateActionPicker.swift */; };
+		9AB2E7B94F4D25DA9E7BBA83 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7C94B36D82EDB2F20745A /* SignInView.swift */; };
+		A98128E3098540CF65FA6AB2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C451407C8E35B729ABF61C46 /* GoogleSignIn */; };
+		ABF61FB3D9ADC2AAD3041ADA /* ClimateNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FC929DA02E5F7B7D9A4929 /* ClimateNoteApp.swift */; };
+		B0D89C83D8BF59E32BD1EF96 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7996774A158D8E19FDC0C4F /* AppConfig.swift */; };
+		B30989351FECE3258783AE1A /* ScreenshotRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D4A910A3CA04E1FE571B88 /* ScreenshotRootView.swift */; };
+		B5BA8E0EA9E6F773BEA6DE92 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90494D9F8B0B272043799FCF /* FeedView.swift */; };
+		B60B523684141954600AE60A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 20E816075BFE34738A98B951 /* FirebaseAuth */; };
+		BD9E3A5C4438D7896BEACF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D14F8E3572AD3362ADE92DE /* Assets.xcassets */; };
+		BDC2BC356FD19E15BD8B2D9E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA66F46DA8C2298CD455AD /* AuthService.swift */; };
+		BDC9C838A23A3904C72A00F0 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79334059AF0CAE0EBE8741CA /* AccountView.swift */; };
+		DCAFB4AAD1A1A39C72837A63 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516031587B6A5B8EDD1F39E8 /* RootView.swift */; };
+		DF49B6CFEFA4C97165443CED /* MyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0091B7E742FB62C625D243 /* MyNoteView.swift */; };
+		E4C054C9457E35BAFF00E43F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3D98ABC56F972B4847E84DC3 /* FirebaseMessaging */; };
+		F192EB5E6FD86D67B18C42AA /* ClimateTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A65BD0D659B1193FABA3411 /* ClimateTheme.swift */; };
+		F5F42E51CC8710228555F064 /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07566CE5242B3D5BBB648EC2 /* ArticleStore.swift */; };
+		FB7B3A375FD5BC6DB32197EF /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = C6F2A355D969B0CAD40CFA66 /* FirebaseCore */; };
+		FB9517C82A3ADDA7090CA974 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 535E4FA6D4BAC1E516120803 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A53E598F131AD8B2DBB85227 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AAED71F4CAA7F89EC1A05C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE03393022C0D7D9507410DE;
+			remoteInfo = ClimateNote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07566CE5242B3D5BBB648EC2 /* ArticleStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArticleStore.swift; path = Services/ArticleStore.swift; sourceTree = "<group>"; };
+		0E0091B7E742FB62C625D243 /* MyNoteView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MyNoteView.swift; path = Views/MyNoteView.swift; sourceTree = "<group>"; };
+		2056FA5A8472FFA7377E74B7 /* NotificationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotificationService.swift; path = Services/NotificationService.swift; sourceTree = "<group>"; };
+		21FC929DA02E5F7B7D9A4929 /* ClimateNoteApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClimateNoteApp.swift; sourceTree = "<group>"; };
+		33612DFB4BD5E8F233F4A71C /* ReflectionStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReflectionStore.swift; path = Services/ReflectionStore.swift; sourceTree = "<group>"; };
+		42EC63C14852397CE679124D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Support/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		48D4A910A3CA04E1FE571B88 /* ScreenshotRootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenshotRootView.swift; path = Views/ScreenshotRootView.swift; sourceTree = "<group>"; };
+		516031587B6A5B8EDD1F39E8 /* RootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = Views/RootView.swift; sourceTree = "<group>"; };
+		52C7C94B36D82EDB2F20745A /* SignInView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignInView.swift; path = Views/SignInView.swift; sourceTree = "<group>"; };
+		535E4FA6D4BAC1E516120803 /* GoogleService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Support/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55C00A324B82A8E9434583E0 /* ClimateNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimateNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D14F8E3572AD3362ADE92DE /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		6141A311AB0A2DF1529DFE8C /* ArticleDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArticleDetailView.swift; path = Views/ArticleDetailView.swift; sourceTree = "<group>"; };
+		6801A063030360580180A137 /* Article.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Article.swift; path = Models/Article.swift; sourceTree = "<group>"; };
+		6A65BD0D659B1193FABA3411 /* ClimateTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClimateTheme.swift; path = Design/ClimateTheme.swift; sourceTree = "<group>"; };
+		6F45CBB323B979FDDBEFA1E7 /* ClimateActionPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClimateActionPicker.swift; path = Views/ClimateActionPicker.swift; sourceTree = "<group>"; };
+		79334059AF0CAE0EBE8741CA /* AccountView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccountView.swift; path = Views/AccountView.swift; sourceTree = "<group>"; };
+		79F642BB4C757844306D2486 /* ImpactFactorCatalog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImpactFactorCatalog.swift; path = Models/ImpactFactorCatalog.swift; sourceTree = "<group>"; };
+		82EA66F46DA8C2298CD455AD /* AuthService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Services/AuthService.swift; sourceTree = "<group>"; };
+		8AD93BAE0DE7992879800ACE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		90494D9F8B0B272043799FCF /* FeedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FeedView.swift; path = Views/FeedView.swift; sourceTree = "<group>"; };
+		9640E596B1EC401DA240EB10 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7996774A158D8E19FDC0C4F /* AppConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppConfig.swift; path = Support/AppConfig.swift; sourceTree = "<group>"; };
+		ABCE86CAE4A0C31B94B5DA57 /* ClimateNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimateNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9224D39F515AB1F01C516AF /* ActionLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionLog.swift; path = Models/ActionLog.swift; sourceTree = "<group>"; };
+		E5407A4BAFB7894AD623F490 /* ArticleBlockTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArticleBlockTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4014378196673CBB22B90355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2B5EC7633043DFF3A982EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDED2B1EA1226EF683C179FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89FD6AFBC8329AD23B687BD5 /* Foundation.framework in Frameworks */,
+				FB7B3A375FD5BC6DB32197EF /* FirebaseCore in Frameworks */,
+				B60B523684141954600AE60A /* FirebaseAuth in Frameworks */,
+				55115F699C72AF4AF4A70FB0 /* FirebaseFirestore in Frameworks */,
+				E4C054C9457E35BAFF00E43F /* FirebaseMessaging in Frameworks */,
+				A98128E3098540CF65FA6AB2 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2728B6A6FBF1414599E58B10 /* ClimateNoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5407A4BAFB7894AD623F490 /* ArticleBlockTests.swift */,
+			);
+			name = ClimateNoteTests;
+			path = ClimateNoteTests;
+			sourceTree = "<group>";
+		};
+		4D27B990BA7CCCBD28745363 /* ClimateNote */ = {
+			isa = PBXGroup;
+			children = (
+				9640E596B1EC401DA240EB10 /* AppDelegate.swift */,
+				21FC929DA02E5F7B7D9A4929 /* ClimateNoteApp.swift */,
+				6A65BD0D659B1193FABA3411 /* ClimateTheme.swift */,
+				D9224D39F515AB1F01C516AF /* ActionLog.swift */,
+				6801A063030360580180A137 /* Article.swift */,
+				79F642BB4C757844306D2486 /* ImpactFactorCatalog.swift */,
+				07566CE5242B3D5BBB648EC2 /* ArticleStore.swift */,
+				82EA66F46DA8C2298CD455AD /* AuthService.swift */,
+				2056FA5A8472FFA7377E74B7 /* NotificationService.swift */,
+				33612DFB4BD5E8F233F4A71C /* ReflectionStore.swift */,
+				A7996774A158D8E19FDC0C4F /* AppConfig.swift */,
+				79334059AF0CAE0EBE8741CA /* AccountView.swift */,
+				6141A311AB0A2DF1529DFE8C /* ArticleDetailView.swift */,
+				6F45CBB323B979FDDBEFA1E7 /* ClimateActionPicker.swift */,
+				90494D9F8B0B272043799FCF /* FeedView.swift */,
+				0E0091B7E742FB62C625D243 /* MyNoteView.swift */,
+				516031587B6A5B8EDD1F39E8 /* RootView.swift */,
+				48D4A910A3CA04E1FE571B88 /* ScreenshotRootView.swift */,
+				52C7C94B36D82EDB2F20745A /* SignInView.swift */,
+				5D14F8E3572AD3362ADE92DE /* Assets.xcassets */,
+				42EC63C14852397CE679124D /* PrivacyInfo.xcprivacy */,
+				535E4FA6D4BAC1E516120803 /* GoogleService-Info.plist */,
+			);
+			name = ClimateNote;
+			path = ClimateNote;
+			sourceTree = "<group>";
+		};
+		8085D2D1D886FA037D3FBC0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABCE86CAE4A0C31B94B5DA57 /* ClimateNote.app */,
+				55C00A324B82A8E9434583E0 /* ClimateNoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B760D6E8DA4DDF12C1E37D83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD6D0EA7C33490667B9557D1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6ABD40D34CBC492932D8D25 = {
+			isa = PBXGroup;
+			children = (
+				8085D2D1D886FA037D3FBC0F /* Products */,
+				B760D6E8DA4DDF12C1E37D83 /* Frameworks */,
+				4D27B990BA7CCCBD28745363 /* ClimateNote */,
+				2728B6A6FBF1414599E58B10 /* ClimateNoteTests */,
+			);
+			sourceTree = "<group>";
+		};
+		DD6D0EA7C33490667B9557D1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8AD93BAE0DE7992879800ACE /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2639E484A3C93362DF0AC99B /* ClimateNoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61D72207C7D522A25A270D3E /* Build configuration list for PBXNativeTarget "ClimateNoteTests" */;
+			buildPhases = (
+				14CB853CC6FB9FFAB61CAF9E /* Sources */,
+				4014378196673CBB22B90355 /* Frameworks */,
+				7D96470DFE7715C83116EAF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D1473A43AEBC454D388E99F /* PBXTargetDependency */,
+			);
+			name = ClimateNoteTests;
+			productName = ClimateNoteTests;
+			productReference = 55C00A324B82A8E9434583E0 /* ClimateNoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FE03393022C0D7D9507410DE /* ClimateNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4D3BD6152F9ED12A1FA05FC /* Build configuration list for PBXNativeTarget "ClimateNote" */;
+			buildPhases = (
+				58270E2BF4C5179BB2541DF6 /* Sources */,
+				CDED2B1EA1226EF683C179FE /* Frameworks */,
+				838DEC34113DCCCA3F936993 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClimateNote;
+			packageProductDependencies = (
+				C6F2A355D969B0CAD40CFA66 /* FirebaseCore */,
+				20E816075BFE34738A98B951 /* FirebaseAuth */,
+				A14BBDD0BD3773E254B30014 /* FirebaseFirestore */,
+				3D98ABC56F972B4847E84DC3 /* FirebaseMessaging */,
+				C451407C8E35B729ABF61C46 /* GoogleSignIn */,
+			);
+			productName = ClimateNote;
+			productReference = ABCE86CAE4A0C31B94B5DA57 /* ClimateNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AAED71F4CAA7F89EC1A05C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					2639E484A3C93362DF0AC99B = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					FE03393022C0D7D9507410DE = {
+						CreatedOnToolsVersion = 26.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SignInWithApple = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 2DAA71AAF07DCB2FDF7A7B57 /* Build configuration list for PBXProject "ClimateNote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6ABD40D34CBC492932D8D25;
+			minimizedProjectReferenceProxies = 0;
+			packageReferences = (
+				BBCC6DB0ED573BE9B90408F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8C9B415D94904EAE1C2AC120 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8085D2D1D886FA037D3FBC0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE03393022C0D7D9507410DE /* ClimateNote */,
+				2639E484A3C93362DF0AC99B /* ClimateNoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D96470DFE7715C83116EAF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838DEC34113DCCCA3F936993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD9E3A5C4438D7896BEACF7A /* Assets.xcassets in Resources */,
+				4332122CE2CC9A691806F78F /* PrivacyInfo.xcprivacy in Resources */,
+				FB9517C82A3ADDA7090CA974 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14CB853CC6FB9FFAB61CAF9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D55C5A56681667E18F8704D /* ArticleBlockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58270E2BF4C5179BB2541DF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				615472A903A673E6CCA26634 /* AppDelegate.swift in Sources */,
+				ABF61FB3D9ADC2AAD3041ADA /* ClimateNoteApp.swift in Sources */,
+				F192EB5E6FD86D67B18C42AA /* ClimateTheme.swift in Sources */,
+				9583F37CF8DDEDFCA239F5C0 /* ActionLog.swift in Sources */,
+				163A6AF11F82C9302C5D3D19 /* Article.swift in Sources */,
+				5763E2F948A64BD361E0B810 /* ImpactFactorCatalog.swift in Sources */,
+				F5F42E51CC8710228555F064 /* ArticleStore.swift in Sources */,
+				BDC2BC356FD19E15BD8B2D9E /* AuthService.swift in Sources */,
+				0E8F11622271804ACE4DE703 /* NotificationService.swift in Sources */,
+				1036F269BA2573DA08ED0355 /* ReflectionStore.swift in Sources */,
+				B0D89C83D8BF59E32BD1EF96 /* AppConfig.swift in Sources */,
+				BDC9C838A23A3904C72A00F0 /* AccountView.swift in Sources */,
+				1FED32E66FBCB8CF6EB87A16 /* ArticleDetailView.swift in Sources */,
+				97EE4248017A826452A680A8 /* ClimateActionPicker.swift in Sources */,
+				B5BA8E0EA9E6F773BEA6DE92 /* FeedView.swift in Sources */,
+				DF49B6CFEFA4C97165443CED /* MyNoteView.swift in Sources */,
+				DCAFB4AAD1A1A39C72837A63 /* RootView.swift in Sources */,
+				B30989351FECE3258783AE1A /* ScreenshotRootView.swift in Sources */,
+				9AB2E7B94F4D25DA9E7BBA83 /* SignInView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D1473A43AEBC454D388E99F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ClimateNote;
+			target = FE03393022C0D7D9507410DE /* ClimateNote */;
+			targetProxy = A53E598F131AD8B2DBB85227 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02186B788B6B4B8E71F162F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APS_ENVIRONMENT = production;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLIMATE_NOTE_API_BASE_URL = "https://the-climate-note.vercel.app";
+				CODE_SIGN_ENTITLEMENTS = ClimateNote/Support/ClimateNote.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = F8X3YXYMWH;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = ClimateNote/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.theclimatenote.app;
+				PRODUCT_MODULE_NAME = ClimateNote;
+				PRODUCT_NAME = "The Climate Note";
+				PROVISIONING_PROFILE_SPECIFIER = "The Climate Note App Store 2026";
+				REVERSED_CLIENT_ID = "com.googleusercontent.apps.392296480237-vrndjphchrs9i9p22jvrggtomslrq549";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2FB337DA95F81B51D99F9D92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3464A3F516179E56DDCEA037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theclimatenote.app.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Climate Note.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/The Climate Note";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4ADC56B2C78CEC4B8EC045B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APS_ENVIRONMENT = development;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLIMATE_NOTE_API_BASE_URL = "https://the-climate-note.vercel.app";
+				CODE_SIGN_ENTITLEMENTS = ClimateNote/Support/ClimateNote.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = F8X3YXYMWH;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = ClimateNote/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.theclimatenote.app;
+				PRODUCT_MODULE_NAME = ClimateNote;
+				PRODUCT_NAME = "The Climate Note";
+				REVERSED_CLIENT_ID = "com.googleusercontent.apps.392296480237-vrndjphchrs9i9p22jvrggtomslrq549";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F91F9830816FC901AF78DCBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FC6AC767791BB3E99E4B8408 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theclimatenote.app.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Climate Note.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/The Climate Note";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DAA71AAF07DCB2FDF7A7B57 /* Build configuration list for PBXProject "ClimateNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB337DA95F81B51D99F9D92 /* Debug */,
+				F91F9830816FC901AF78DCBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61D72207C7D522A25A270D3E /* Build configuration list for PBXNativeTarget "ClimateNoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3464A3F516179E56DDCEA037 /* Release */,
+				FC6AC767791BB3E99E4B8408 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4D3BD6152F9ED12A1FA05FC /* Build configuration list for PBXNativeTarget "ClimateNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02186B788B6B4B8E71F162F7 /* Release */,
+				4ADC56B2C78CEC4B8EC045B5 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C9B415D94904EAE1C2AC120 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.2.0;
+			};
+		};
+		BBCC6DB0ED573BE9B90408F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20E816075BFE34738A98B951 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBCC6DB0ED573BE9B90408F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3D98ABC56F972B4847E84DC3 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBCC6DB0ED573BE9B90408F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		A14BBDD0BD3773E254B30014 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBCC6DB0ED573BE9B90408F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C451407C8E35B729ABF61C46 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C9B415D94904EAE1C2AC120 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		C6F2A355D969B0CAD40CFA66 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBCC6DB0ED573BE9B90408F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2AAED71F4CAA7F89EC1A05C7 /* Project object */;
+}
